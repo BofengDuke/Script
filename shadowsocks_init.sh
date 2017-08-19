@@ -15,14 +15,6 @@ shadowsocks_pid(){
 
 
 install(){
-    echo "Input your vps ip: "
-    read IP
-    if [[ $IP =~ ([0-9]{1,3}\.){1,3}[0-9]{1,3} ]];then
-        echo $IP" is right"
-    else
-        echo $IP" is false"
-        exit 1
-    fi
     echo "Input your passwd: "
     read passwd
 	echo -e  "\e[00;32mwaiting ......\e[00m"
