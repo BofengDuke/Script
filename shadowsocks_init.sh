@@ -21,7 +21,7 @@ install(){
 
 
     apt-get update &>/dev/null 
-    apt-get install python-pip &>/dev/null
+    apt-get install python-pip - &>/dev/null
     python -m pip install --upgrade pip &>/dev/null
     python -m pip install shadowsocks &>/dev/null
 
