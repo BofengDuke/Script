@@ -19,10 +19,10 @@ install(){
     read passwd
 	echo -e  "\e[00;32mwaiting ......\e[00m"
 
-
     apt-get update &>/dev/null 
     apt-get install python-pip - &>/dev/null
     python -m pip install --upgrade pip &>/dev/null
+    python -m pip install setuptools :
     python -m pip install shadowsocks &>/dev/null
 
     mkdir -p /etc/shadowsocks/
