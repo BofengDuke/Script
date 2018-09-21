@@ -2,7 +2,7 @@
 
 # Install shadowsocks for ubuntu
 # description: Shadows start/stop/status/restart/install script
-# Usage: ./shadowsocks_init.sh {start|stop|status|restart|install}
+# Usage: sudo ./shadowsocks_init.sh {start|stop|status|restart|install}
 
 shadowsocks_bin=`which ssserver`
 shadowsocks_conf=/etc/shadowsocks/config.json
@@ -20,10 +20,9 @@ install(){
 	echo -e  "\e[00;32mwaiting ......\e[00m"
 
     apt-get update &>/dev/null 
-    apt-get install python-pip - &>/dev/null
-    python -m pip install --upgrade pip &>/dev/null
-    python -m pip install setuptools :
-    python -m pip install shadowsocks &>/dev/null
+    apt-get install python-pip -y
+    python -m pip install --upgrade pip 
+    python -m pip install setuptools shadowsocks  
 
     mkdir -p /etc/shadowsocks/
 
